@@ -1,0 +1,50 @@
+/*
+ Localizable.strings
+ GoChef
+ 
+ Created by Edson Rottava on 29/07/19.
+ Copyright © 2019 Edson Rottava. All rights reserved.
+ */
+
+//APP
+//"app_name" = "GoChef"
+//"facebook_app_id" = "1297226603776561"
+//"fb_login_protocol_scheme" = "fb1297226603776561"
+//Login
+"login_description" = "O seu chef de bolso!\n";
+"login_facebook" = "Login with Facebook";
+"login_google" = "Login with Google";
+//Search
+"searchbar_search" = "Busca";
+"searchbar_hint" = "Pão de alho";
+//Navigation
+"navigation_home" = "RECEITAS";
+"navigation_favorites" = "FAVORITOS";
+"navigation_user" = "PERFIL";
+//Main
+"main_type" = "Tipo da receita";
+"main_name" = "Nome da receita";
+"main_recipes" = "MAIS RECEITAS";
+//Expanded
+"expanded_type" = "Tipo da receita";
+"expanded_name" = "Nome da receita";
+"expanded_ingredients" = "INGREDIENTES";
+"expanded_steps" = "MODO DE PREPARO";
+"expanded_more" = "MAIS RECEITAS COMO ESTA...";
+"expanded_url" = "Acesse o Site";
+"expanded_placeholder" = "NAO SUPORTADO PELO YUMMLY";
+//Favorites
+"favorite_place" = "FAVORITOS";
+"favorite_placeholder" = "Nenhum favorito salvo!\nExperimente salvar uma receita clicando no ♥";
+//User
+"user_name" = "Nome do Usuario";
+"user_email" = "Email@do.usuario";
+"user_logout" = "Sair";
+"user_cred" = "Feito por Junior Rottava.\nMe contrata pf";
+//ItemCell
+"item_name" = "Nome da receita";
+"item_steps" = "Yummly não tem suporte a esta função!";
+//Dock
+"dock_home" = "Home";
+"dock_favorite" = "Favoritos";
+"dock_user" = "Perfil";
