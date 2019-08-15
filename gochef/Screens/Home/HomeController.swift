@@ -102,6 +102,7 @@ extension HomeController {
         prepareGrid()
         loadCollection()
         setupView()
+        dismissKey()
     }
     //GridView
     private func prepareGrid() {
@@ -210,5 +211,17 @@ extension HomeController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+}
+//HideKeyboard
+extension HomeController {
+    private func dismissKey() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(HomeController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    @objc
+    private func dismissKeyboard() {
+        view.endEditing(true)
     }
 }

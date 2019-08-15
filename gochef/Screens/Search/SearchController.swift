@@ -50,6 +50,7 @@ extension SearchController {
         setupSearchBar()
         setupView()
         updateSearch()
+        dismissKey()
     }
     //collectionView
     internal func prepareGrid() {
@@ -133,5 +134,16 @@ extension SearchController {
             }
         }
         txtSearchBar.resignFirstResponder()
+    }
+}
+extension SearchController {
+    private func dismissKey() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(SearchController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    @objc
+    private func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
