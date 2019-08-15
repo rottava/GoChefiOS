@@ -9,6 +9,7 @@
 import UIKit
 
 class SearchController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITextFieldDelegate {
+    var searchTxt: String = ""
     //CollectionViewData
     internal var filtered: RecipeList = RecipeList(recipeSearches: RecipeSearchResult(matches: []))
     internal let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
@@ -32,6 +33,8 @@ class SearchController: UIViewController, UICollectionViewDataSource, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareSetup()
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true;
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil;
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -46,6 +49,7 @@ extension SearchController {
         prepareSearchBar()
         setupSearchBar()
         setupView()
+        updateSearch()
     }
     //collectionView
     internal func prepareGrid() {
@@ -66,6 +70,7 @@ extension SearchController {
         txtSearchBar.delegate = self
         txtSearchBar.frame = CGRect(x: txtSearchBarSize, y: Constants.spacing*2.22, width: view.bounds.width-txtSearchBarSize*2, height: Constants.backButtonSize*2)
         backButton.frame = CGRect(x: Constants.spacing, y: (Constants.spacing*2.22)+Constants.backButtonSize/2, width: Constants.backButtonSize, height: Constants.backButtonSize)
+        txtSearchBar.text = searchTxt
     }
     //BackButton
     @objc
@@ -104,6 +109,15 @@ extension SearchController {
     }
     
     internal func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        updateSearch()
+        return true
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    private func updateSearch() {
         let activityIndicator = UIActivityIndicatorView(style: .gray)
         txtSearchBar.addSubview(activityIndicator)
         activityIndicator.frame = txtSearchBar.bounds
@@ -119,10 +133,5 @@ extension SearchController {
             }
         }
         txtSearchBar.resignFirstResponder()
-        return true
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 }

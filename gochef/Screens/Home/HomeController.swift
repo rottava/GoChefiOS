@@ -190,7 +190,7 @@ extension HomeController {
 extension HomeController {
     @objc
     private func searchTouch() {
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "loadSearchView"), object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "loadSearchView"), object: self, userInfo: ["searchTxt":txtSearchBar.text!])
     }
     @objc
     private func recipeTouch() {

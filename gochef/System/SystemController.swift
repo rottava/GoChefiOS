@@ -124,10 +124,12 @@ extension SystemController {
         navigationController?.pushViewController(viewController, animated: false)
     }
     //Load User View
-    internal func loadSearchView() {
+    internal func loadSearchView(searchTxt: String) {
         var viewController: UIViewController = UINavigationController.init()
         viewController = SearchController()
-        navigationController?.pushViewController(viewController, animated: false)
+        let vc = viewController as! SearchController
+        vc.searchTxt = searchTxt
+        navigationController?.pushViewController(vc, animated: true)
     }
     //Try to login
     internal func loginTry() {
@@ -226,7 +228,9 @@ extension SystemController {
     //Load Search View
     @objc
     internal func loadSearchView(_ notification: Notification) {
-        loadSearchView()
+        if let searchTxt = notification.userInfo?["searchTxt"] as? String {
+            loadSearchView(searchTxt: searchTxt)
+        }
     }
     //Login Button Press
     @objc
