@@ -31,6 +31,11 @@ class RecipeCell: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        itemNameLabel.text = NSLocalizedString("item_name", comment: "Name");
+        itemImageView.image = UIImage(named: "404")
+    }
 }
 //Extension
 extension RecipeCell {

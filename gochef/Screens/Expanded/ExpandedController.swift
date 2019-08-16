@@ -154,6 +154,8 @@ extension ExpandedController {
         collectionView.dataSource = self
         collectionView.backgroundColor = .clear
         collectionView.register(RecipeCell.self, forCellWithReuseIdentifier: Constants.cellIdentifier)
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
     }
     //MoreData
     private func prepareMoreData() {

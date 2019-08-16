@@ -39,7 +39,6 @@
 		3F621FD72304528900E94E55 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F621FD62304528800E94E55 /* Default-568h@2x.png */; };
 		3F621FF92304546D00E94E55 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F621FF82304546D00E94E55 /* libsqlite3.0.tbd */; };
 		3F621FFB230454BE00E94E55 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F621FFA230454BE00E94E55 /* StoreKit.framework */; };
-		3F6220092304560300E94E55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F6220082304560300E94E55 /* GoogleService-Info.plist */; };
 		3F6220192304563C00E94E55 /* GoogleDataTransport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F62200A2304563B00E94E55 /* GoogleDataTransport.framework */; };
 		3F62201A2304563C00E94E55 /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F62200B2304563B00E94E55 /* FirebaseCoreDiagnostics.framework */; };
 		3F62201B2304563C00E94E55 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F62200C2304563B00E94E55 /* GoogleAppMeasurement.framework */; };
@@ -58,6 +57,7 @@
 		3F622029230456C700E94E55 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F622028230456C700E94E55 /* LocalAuthentication.framework */; };
 		3F62202B230457BA00E94E55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F62202A230457BA00E94E55 /* Assets.xcassets */; };
 		3F62202D2304788500E94E55 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F62202C2304788500E94E55 /* UserInfo.swift */; };
+		3F6E268323074760001904D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F6E268223074760001904D5 /* GoogleService-Info.plist */; };
 		3F958C652305DE2A006820DE /* leveldb-library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F958C632305DE2A006820DE /* leveldb-library.framework */; };
 		3F958C662305DE2A006820DE /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F958C642305DE2A006820DE /* FirebaseDatabase.framework */; };
 		3FE89B232304A02900D33465 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE89B222304A02800D33465 /* Bolts.framework */; };
@@ -107,7 +107,6 @@
 		3F6220022304558400E94E55 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		3F6220042304559200E94E55 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		3F622006230455A000E94E55 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		3F6220082304560300E94E55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F62200A2304563B00E94E55 /* GoogleDataTransport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleDataTransport.framework; path = Carthage/Build/iOS/GoogleDataTransport.framework; sourceTree = SOURCE_ROOT; };
 		3F62200B2304563B00E94E55 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCoreDiagnostics.framework; path = Carthage/Build/iOS/FirebaseCoreDiagnostics.framework; sourceTree = SOURCE_ROOT; };
 		3F62200C2304563B00E94E55 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppMeasurement.framework; path = Carthage/Build/iOS/GoogleAppMeasurement.framework; sourceTree = SOURCE_ROOT; };
@@ -126,6 +125,7 @@
 		3F622028230456C700E94E55 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		3F62202A230457BA00E94E55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F62202C2304788500E94E55 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		3F6E268223074760001904D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F958C632305DE2A006820DE /* leveldb-library.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "leveldb-library.framework"; sourceTree = "<group>"; };
 		3F958C642305DE2A006820DE /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = "<group>"; };
 		3FE89B222304A02800D33465 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -195,7 +195,7 @@
 				3F621FAF2304520A00E94E55 /* System */,
 				3F621FB42304521000E94E55 /* Yummly */,
 				3F621F87230451BC00E94E55 /* Info.plist */,
-				3F6220082304560300E94E55 /* GoogleService-Info.plist */,
+				3F6E268223074760001904D5 /* GoogleService-Info.plist */,
 			);
 			path = gochef;
 			sourceTree = "<group>";
@@ -434,8 +434,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F6220092304560300E94E55 /* GoogleService-Info.plist in Resources */,
 				3F621FD52304521D00E94E55 /* Localizable.strings in Resources */,
+				3F6E268323074760001904D5 /* GoogleService-Info.plist in Resources */,
 				3F62202B230457BA00E94E55 /* Assets.xcassets in Resources */,
 				3F621FD72304528900E94E55 /* Default-568h@2x.png in Resources */,
 			);
@@ -613,6 +613,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VZZBK783Q6;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -624,7 +625,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rottava.gochef;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rottava.gochefios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -637,6 +638,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VZZBK783Q6;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -648,7 +650,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rottava.gochef;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rottava.gochefios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

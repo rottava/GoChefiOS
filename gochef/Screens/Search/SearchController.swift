@@ -64,6 +64,7 @@ extension SearchController {
         collectionView.backgroundColor = .clear
         collectionView.register(RecipeCell.self, forCellWithReuseIdentifier: Constants.cellIdentifier)
         collectionView.showsVerticalScrollIndicator = false
+        collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
     }
     //SearchBar
     internal func prepareSearchBar() {

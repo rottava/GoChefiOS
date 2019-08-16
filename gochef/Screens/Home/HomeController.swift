@@ -115,6 +115,7 @@ extension HomeController {
         collectionView.backgroundColor = .clear
         collectionView.register(RecipeCell.self, forCellWithReuseIdentifier: Constants.cellIdentifier)
         collectionView.showsHorizontalScrollIndicator = false
+        collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
     }
     //PrepareRecipes
     private func loadCollection() {

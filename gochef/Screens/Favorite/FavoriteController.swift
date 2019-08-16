@@ -13,7 +13,7 @@ class FavoriteController: UIViewController, UICollectionViewDataSource, UICollec
     internal let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
     internal var favoriteView: UIView = UIView()
     internal var collectionView: UICollectionView!
-    internal var filtered:[String] = Array()
+    internal var lastCount: Int = 0
     //Favorites
     internal let favoriteLabel: UILabel = {
         let label = UILabel()
@@ -31,6 +31,10 @@ class FavoriteController: UIViewController, UICollectionViewDataSource, UICollec
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        if (Constants.favoritesList.count != lastCount) {
+            collectionView.reloadData()
+            lastCount = Constants.favoritesList.count
+        }
         collectionView.reloadData()
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -56,6 +60,7 @@ extension FavoriteController {
         collectionView.backgroundColor = .clear
         collectionView.register(RecipeCell.self, forCellWithReuseIdentifier: Constants.cellIdentifier)
         collectionView.showsVerticalScrollIndicator = false
+        collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
     }
 }
 //CollectionView
@@ -80,7 +85,6 @@ extension FavoriteController {
         return recipeItem
     }
     internal func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let count = Constants.favoritesList.count
-        return count
+        return Constants.favoritesList.count
     }
 }
