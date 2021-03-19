@@ -6,7 +6,7 @@
 //  Copyright © 2019 Edson Rottava. All rights reserved.
 //
 import UIKit
-import GoogleSignIn
+//import GoogleSignIn
 
 struct Constants {
     static let APP_ID = "6ac28980"

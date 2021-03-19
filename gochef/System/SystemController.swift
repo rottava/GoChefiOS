@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import FirebaseAuth
-import GoogleSignIn
-import FBSDKLoginKit
-import FirebaseDatabase
+//import FirebaseAuth
+//import GoogleSignIn
+//import FBSDKLoginKit
+//import FirebaseDatabase
 
 class SystemController: UIViewController, UIGestureRecognizerDelegate {
     
@@ -20,7 +20,7 @@ class SystemController: UIViewController, UIGestureRecognizerDelegate {
     internal let userController: UIViewController = UserController()
     internal var screenFrame: CGRect = CGRect(x: 0, y: 0, width: 0, height: 0)
     internal let dockView: UIView = UIView()
-    internal var database: DatabaseReference = Database.database().reference()
+    //internal var database: DatabaseReference = Database.database().reference()
     
     internal let homeButton: UIButton = {
         let button = UIButton(type: .custom)
@@ -133,6 +133,8 @@ extension SystemController {
     }
     //Try to login
     internal func loginTry() {
+        self.prepareSetup()
+        /*
         _ = Auth.auth().addStateDidChangeListener { (auth, user) in
             if Auth.auth().currentUser != nil {
                 // User is signed in.
@@ -142,6 +144,7 @@ extension SystemController {
                 self.loadLoginView()
             }
         }
+        */
     }
     //DockNav
     internal func prepareDock() {
@@ -177,6 +180,13 @@ extension SystemController {
     }
     //User
     internal func prepareUser() {
+        Constants.userInfo.userId = "123456"
+        Constants.userInfo.idToken = "0"
+        Constants.userInfo.fullName = NSLocalizedString("user_name", comment: "Name")
+        Constants.userInfo.email = NSLocalizedString("user_email", comment: "Email")
+        Constants.userInfo.imageURL = URL(string: "")
+        Constants.favoritesList = [String]()
+        /*
         let user = Auth.auth().currentUser
         if let user = user {
             // The user's ID, unique to the Firebase project.
@@ -198,6 +208,7 @@ extension SystemController {
                 print(error.localizedDescription)
             }
         }
+         */
     }
     //List of views
     internal enum screen {
@@ -245,13 +256,16 @@ extension SystemController {
     //Logout Button Press
     @objc
     internal func logoutButtonTouch(_ notification: Notification) {
+        /*
         if((FBSDKAccessToken.current()) != nil) {
             fbLogout()
         } else {
             GIDSignIn.sharedInstance()?.signOut()
             GIDSignIn.sharedInstance().disconnect()
         }
+         */
     }
+    /*
     private func fbLogout() {
         let firebaseAuth = Auth.auth()
         do {
@@ -263,6 +277,7 @@ extension SystemController {
             print ("Facebook: Error signing out: %@", signOutError)
         }
     }
+    */
 }
 //MARK: DockNavigation
 extension SystemController {

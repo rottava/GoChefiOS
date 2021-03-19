@@ -7,12 +7,13 @@
 //
 
 import UIKit
-import FirebaseAuth
-import GoogleSignIn
-import FBSDKCoreKit
-import FBSDKLoginKit
+//import FirebaseAuth
+//import GoogleSignIn
+//import FBSDKCoreKit
+//import FBSDKLoginKit
 
-class LoginController: UIViewController, GIDSignInUIDelegate {
+class LoginController: UIViewController {
+    
     //BackgroundImage
     internal let bgView: UIImageView = {
         let iView = UIImageView()
@@ -33,6 +34,7 @@ class LoginController: UIViewController, GIDSignInUIDelegate {
         return label
     }()
     //Facebook Button
+    
     internal let fbButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .white
@@ -41,9 +43,10 @@ class LoginController: UIViewController, GIDSignInUIDelegate {
         button.titleLabel?.font = .systemFont(ofSize: 14)
         button.layer.cornerRadius = 5
         button.clipsToBounds = true
-        button.addTarget(self, action: #selector(logInWithFacebook), for: .touchUpInside)
+        //button.addTarget(self, action: #selector(logInWithFacebook), for: .touchUpInside)
         return button
     }()
+    
     //Google Button
     internal let gButton: UIButton = {
         let button = UIButton()
@@ -53,20 +56,40 @@ class LoginController: UIViewController, GIDSignInUIDelegate {
         button.titleLabel?.font = .systemFont(ofSize: 14)
         button.layer.cornerRadius = 5
         button.clipsToBounds = true
-        button.addTarget(self, action: #selector(logInWithGoogle), for: .touchUpInside)
+        //button.addTarget(self, action: #selector(logInWithGoogle), for: .touchUpInside)
         return button
     }()
+    
+    //Placeholder Button
+    internal let logButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .white
+        button.setTitle(NSLocalizedString("login", comment: "Placeholder"), for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 14)
+        button.layer.cornerRadius = 5
+        button.clipsToBounds = true
+        button.addTarget(self, action: #selector(login), for: .touchUpInside)
+        return button
+    }()
+    
     //Controller
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupGoogleLogin()
+        //setupGoogleLogin()
         setupView()
     }
+    
+    @objc
+    private func login() {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "loginButtonTouch"), object: nil)
+    }
 }
+/*
 //GoogleLogin
 extension LoginController {
     private func setupGoogleLogin() {
-        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance()?.delegate = self
     }
     @objc
     private func logInWithGoogle() {
@@ -96,3 +119,4 @@ extension LoginController {
         })
     }
 }
+*/

@@ -12,8 +12,9 @@ extension LoginController {
         prepareBackground()
         prepareLogo()
         prepareDescription()
-        prepareFacebook()
-        prepareGoogle()
+        prepareLogin()
+        //prepareFacebook()
+        //prepareGoogle()
     }
     
     private func prepareBackground() {
@@ -56,5 +57,13 @@ extension LoginController {
         gButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         gButton.topAnchor.constraint(equalTo: fbButton.bottomAnchor, constant: Constants.spacing).isActive = true
         gButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
+    }
+    
+    private func prepareLogin() {
+        view.addSubview(logButton)
+        logButton.translatesAutoresizingMaskIntoConstraints = false
+        logButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        logButton.topAnchor.constraint(equalTo: descLabel.bottomAnchor, constant: Constants.spacing*2).isActive = true
+        logButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
     }
 }

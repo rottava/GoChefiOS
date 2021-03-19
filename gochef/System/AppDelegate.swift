@@ -7,20 +7,20 @@
 //
 
 import UIKit
-import FirebaseCore
-import FirebaseAuth
-import GoogleSignIn
-import FBSDKCoreKit
-import FBSDKLoginKit
+//import FirebaseCore
+//import FirebaseAuth
+//import GoogleSignIn
+//import FBSDKCoreKit
+//import FBSDKLoginKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupFirebase()
-        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        //FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         setupView()
         return true
     }
@@ -51,6 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 extension AppDelegate {
     //AppCore
     private func setupView() {
+        /*
         guard let statusBarView = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else {
             return
         }
@@ -58,6 +59,7 @@ extension AppDelegate {
             return .lightContent
         }
         statusBarView.backgroundColor = UIColor.black
+        */
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         let viewController = SystemController()
@@ -65,8 +67,8 @@ extension AppDelegate {
     }
     //Firebase
     private func setupFirebase() {
-        FirebaseApp.configure()
-        setupGoogleLogin()
+        //FirebaseApp.configure()
+        //setupGoogleLogin()
     }
     //Verificação de link
     /*@available(iOS 9.0, *)
@@ -79,6 +81,7 @@ extension AppDelegate {
     }*/
 }
 //MARK: GoogleSetup
+/*
 extension AppDelegate {
     //Google
     private func setupGoogleLogin() {
@@ -114,6 +117,7 @@ extension AppDelegate {
         }
     }
 }
+*/
 //MARK: SafeLayout
 extension UIView {
     var safeTopAnchor: NSLayoutYAxisAnchor {

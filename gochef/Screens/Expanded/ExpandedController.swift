@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FirebaseDatabase
+//import FirebaseDatabase
 
 class ExpandedController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITableViewDataSource, UITableViewDelegate {
     //Recipe
@@ -20,7 +20,7 @@ class ExpandedController: UIViewController, UICollectionViewDataSource, UICollec
     internal var collectionView: UICollectionView!
     internal let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
     internal var filtered: RecipeList = RecipeList(recipeSearches: RecipeSearchResult(matches: []))
-    internal var database: DatabaseReference = Database.database().reference()
+    //internal var database: DatabaseReference = Database.database().reference()
     //CustomNavBar
     internal let backButton: UIButton = {
         let button = UIButton(type: .custom)
@@ -221,11 +221,11 @@ extension ExpandedController {
         if let index = Constants.favoritesList.firstIndex(of: recipeID) {
             Constants.favoritesList.remove(at: index)
             favButton.setImage(UIImage(named: "FavOut"), for: .normal)
-            database.child("users").child(Constants.userInfo.userId).child("favorites").setValue(Constants.favoritesList)
+            //database.child("users").child(Constants.userInfo.userId).child("favorites").setValue(Constants.favoritesList)
         } else {
             Constants.favoritesList.append(recipeID)
             favButton.setImage(UIImage(named: "FavIn"), for: .normal)
-            database.child("users").child(Constants.userInfo.userId).child("favorites").setValue(Constants.favoritesList)
+            //database.child("users").child(Constants.userInfo.userId).child("favorites").setValue(Constants.favoritesList)
         }
     }
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {

@@ -69,13 +69,13 @@ extension UserController {
         scrollView.bounces = false
         userName.text = Constants.userInfo.fullName
         userEmail.text = Constants.userInfo.email
-        userImage.downloaded(from: Constants.userInfo.imageURL)
+        //userImage.downloaded(from: Constants.userInfo.imageURL)
         setupView()
     }
     private func updateInfo() {
         userName.text = Constants.userInfo.fullName
         userEmail.text = Constants.userInfo.email
-        userImage.downloaded(from: Constants.userInfo.imageURL)
+        //userImage.downloaded(from: Constants.userInfo.imageURL)
     }
     @objc
     private func userLogout() {

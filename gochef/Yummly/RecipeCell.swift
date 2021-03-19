@@ -40,7 +40,7 @@ class RecipeCell: UICollectionViewCell {
 //Extension
 extension RecipeCell {
     private func setupView() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: Selector(("recipeTouch")))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(recipeTouch))
         itemImageView.addGestureRecognizer(tapGesture)
         itemImageView.isUserInteractionEnabled = true
         //RecipeNameLabel
