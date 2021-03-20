@@ -196,7 +196,7 @@ extension HomeController {
     }
     @objc
     private func recipeTouch() {
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "loadExpandedView"), object: self, userInfo: ["recipeID":first.id!])
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "loadExpandedView"), object: self)//, userInfo: ["recipeID":first.id!])
     }
 }
 //MARK: SearchBar

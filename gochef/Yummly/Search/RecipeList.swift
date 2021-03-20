@@ -8,11 +8,11 @@
 
 import UIKit
 
-struct RecipeSearchResult: Decodable {
+struct RecipeSearchResult: Codable, Hashable {
     var matches: [Item]
 }
 
-struct Item: Decodable {
+struct Item: Codable, Hashable {
     var id: String?
     var recipeName: String?
     var imageUrlsBySize: [String: URL?]

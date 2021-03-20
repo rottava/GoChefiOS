@@ -256,6 +256,7 @@ extension SystemController {
     //Logout Button Press
     @objc
     internal func logoutButtonTouch(_ notification: Notification) {
+        loadLoginView()
         /*
         if((FBSDKAccessToken.current()) != nil) {
             fbLogout()

@@ -248,7 +248,7 @@ extension ExpandedController {
             } else if let recipeDetail = recipeDetail {
                 recipeItem.itemNameLabel.text = recipeDetail.name
                 recipeItem.itemImageView.image = Helpers().getDetailImage(url: recipeDetail.images[0].imageUrlsBySize["90"]!)
-                recipeItem.recipeID = currentId!
+                recipeItem.recipeID = currentId ?? ""
             }
         }
         return recipeItem
